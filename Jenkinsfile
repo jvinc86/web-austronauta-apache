@@ -14,10 +14,9 @@ pipeline {
         }
         stage('Build') {
             steps {
-                // sh 'docker stop website'
-                // sh 'docker rm website'
-                // sh 'docker rmi vincenup/nasaimagen:"latest"'
-                sh 'cd ejemplo-imagen-apache/'
+                sh 'docker stop website'
+                sh 'docker rm website'
+                sh 'docker rmi vincenup/nasaimagen:"latest"'
                 sh 'docker build -t vincenup/nasaimagen:${BUILD_NUMBER} .'
                 sh 'docker tag vincenup/nasaimagen:${BUILD_NUMBER} vincenup/nasaimagen:"latest"'
             }
