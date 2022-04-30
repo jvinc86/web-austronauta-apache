@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Code') {
             steps {
-                git 'https://github.com/jvinc86/web-astronauta'
+                git 'https://github.com/jvinc86/web-austronauta-apache.git'
             }
         }
         stage('Build') {
