@@ -1,7 +1,9 @@
-FROM httpd:latest
+FROM nginx:latest
 
-LABEL maintainer="NeoDevops@gmail.com"
+LABEL maintainer="teamdevops@gmail.com"
 
-WORKDIR /usr/local/apache2/htdocs/
+WORKDIR /usr/share/nginx/html
 
-COPY ./codigo-html/ .
+COPY ./miWeb .
+
+EXPOSE 80
