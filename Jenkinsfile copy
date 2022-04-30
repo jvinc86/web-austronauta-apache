@@ -1,13 +1,15 @@
+// Utilizar este Jenkinsfile si se selecciona en el pipeline Definition="Pipeline script" en vez de "Pipeline script from SCM"
+
 pipeline {
     agent any
 
     stages {
 
-        // stage('Code') {
-        //     steps {
-        //         git 'https://github.com/jvinc86/web-austronauta-apache.git'
-        //     }
-        // }
+        stage('Code') {
+            steps {
+                git 'https://github.com/jvinc86/web-austronauta-apache.git'
+            }
+        }
 
         stage('Build') {
             steps {
