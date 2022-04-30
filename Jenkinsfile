@@ -22,7 +22,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'echo "--------------------- TEST ------------------------"'
-                sh 'echo "Para testar ingresar a http://ip_agente y verifica"'
+                sh 'echo "Para testar ingresar a http://192.168.56.21 y verifica"'
                 sh 'echo "---------------------------------------------------"'
             }
         }
